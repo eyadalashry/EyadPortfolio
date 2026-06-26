@@ -1,4 +1,5 @@
 import { Switch, Route, Router as WouterRouter } from "wouter";
+import { Analytics } from "@vercel/analytics/react";
 import HomePage from "./pages/HomePage";
 import ProjectPage from "./pages/ProjectPage";
 
@@ -15,6 +16,7 @@ function App() {
   return (
     <WouterRouter base={import.meta.env.BASE_URL?.replace(/\/$/, "") ?? ""}>
       <Router />
+      <Analytics />
     </WouterRouter>
   );
 }
